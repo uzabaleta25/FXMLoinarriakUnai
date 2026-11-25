@@ -6,5 +6,5 @@ module eus.liburutegia {
 
     // TODO (3. urratsa): controller paketea sortu ondoren, kendu iruzkina.
     // FXMLLoaderrek isla (reflection) bidez sartu behar du @FXML eremu pribatuetara.
-    // opens eus.liburutegia.controller to javafx.fxml;
+    opens eus.liburutegia.controller to javafx.fxml;
 }
