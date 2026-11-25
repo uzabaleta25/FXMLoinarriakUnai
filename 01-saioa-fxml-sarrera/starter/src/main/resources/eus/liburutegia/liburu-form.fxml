@@ -3,17 +3,33 @@
 <!-- 1. Inportazioak: FXMLan erabiltzen den klase bakoitzak bere <?import?> behar du -->
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
 <!-- TODO: gehitu Label, TextField eta Button klaseen inportazioak -->
 
 <!-- 2. Erro-elementua -->
 <!-- TODO (3. urratsa): gehitu fx:controller atributua -->
+
 <GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+          fx:controller="eus.liburutegia.controller.LiburuFormController"
           hgap="10" vgap="10">
 
     <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
 
     <!-- Adibidea: lehen errenkada -->
     <Label text="Izenburua:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="izenburuaField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Egilea" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="egileaField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Urtea" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="urteaField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Button text="Gorde" onAction="#gorde" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label fx:id="mezuaLabel" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
 
     <!-- TODO: osatu formularioa LiburuFormView.java klasean dagoenaren arabera -->
 
